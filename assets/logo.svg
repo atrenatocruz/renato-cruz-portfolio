@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32">
+  <defs>
+    <linearGradient id="logoGradient" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#d1d5db" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="45" fill="url(#logoGradient)" stroke="#ffffff" stroke-width="2" stroke-opacity="0.3"/>
+  
+  <!-- RC++ Text -->
+  <text x="50" y="60" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600" text-anchor="middle" fill="#1a2130">RC</text>
+  <text x="65" y="55" font-family="Inter, Arial, sans-serif" font-size="8" font-weight="500" text-anchor="middle" fill="#1a2130">++</text>
+  
+  <!-- Decorative square outline -->
+  <path d="M25 25 L75 25 L75 35 M75 25 L75 75 L65 75" stroke="#1a2130" stroke-width="2" fill="none" opacity="0.6"/>
+</svg>
