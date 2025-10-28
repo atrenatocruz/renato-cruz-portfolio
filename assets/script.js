@@ -69,32 +69,6 @@ function updateActiveNavLink() {
 
 window.addEventListener('scroll', updateActiveNavLink);
 
-// Form handling with better UX
-const form = document.querySelector('form');
-if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const successMessage = document.getElementById('form-success');
-    const submitButton = form.querySelector('button');
-    
-    // Show loading state
-    submitButton.textContent = 'Sending...';
-    submitButton.disabled = true;
-    
-    // Simulate form submission (replace with actual form handling)
-    setTimeout(() => {
-      successMessage.classList.remove('hidden');
-      form.reset();
-      submitButton.textContent = 'Send';
-      submitButton.disabled = false;
-      
-      // Hide success message after 5 seconds
-      setTimeout(() => {
-        successMessage.classList.add('hidden');
-      }, 5000);
-    }, 1500);
-  });
-}
 
 // Year
 document.getElementById('year').textContent = new Date().getFullYear();

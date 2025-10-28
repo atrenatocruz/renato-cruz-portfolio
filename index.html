@@ -124,14 +124,13 @@
 
             <!-- Enhanced CTA buttons -->
             <div class="flex flex-wrap items-center gap-4">
-              <a href="#projects" class="cta-primary group">
-                <span class="cta-primary-text">View projects</span>
-                <div class="cta-primary-icon">→</div>
-                <div class="cta-primary-glow"></div>
+              <a href="#projects" class="cta-primary">
+                <span>View projects</span>
+                <span class="ml-2">→</span>
               </a>
-              <a href="#contact" class="cta-secondary group">
-                <span class="cta-secondary-text">Get in touch</span>
-                <div class="cta-secondary-icon">💬</div>
+              <a href="#contact" class="cta-secondary">
+                <span>Get in touch</span>
+                <span class="ml-2">💬</span>
               </a>
             </div>
 
@@ -195,7 +194,7 @@
             </p>
           </div>
           
-          <div class="about-info-grid">
+          <div class="grid gap-4 sm:grid-cols-2">
             <div class="info-card">
               <div class="info-icon">🎓</div>
               <div class="info-content">
@@ -373,32 +372,14 @@
     <!-- Contact -->
     <section id="contact" class="mx-auto max-w-5xl px-6 pb-24">
       <div class="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-soft">
-        <div class="grid gap-8 md:grid-cols-2">
-          <div>
-            <h2 class="text-xl font-semibold text-white">Let's connect</h2>
-            <p class="mt-2 text-sm text-ink-300">Available for freelance projects and full‑time opportunities.</p>
-            <ul class="mt-6 space-y-2 text-sm text-ink-200">
-              <li>Email: <a class="underline underline-offset-4 hover:text-white" href="mailto:at.renatocruz@gmail.com">at.renatocruz@gmail.com</a></li>
-              <li>LinkedIn: <a class="underline underline-offset-4 hover:text-white" href="https://www.linkedin.com/in/renatopcruz/" target="_blank" rel="noreferrer">/in/renatopcruz</a></li>
-              <li>Phone: <span class="text-ink-200">+351 915 360 275</span></li>
-            </ul>
-          </div>
-          <form class="space-y-3" onsubmit="event.preventDefault(); document.getElementById('form-success').classList.remove('hidden'); this.reset();">
-            <div>
-              <label class="sr-only" for="name">Name</label>
-              <input id="name" required placeholder="Your name" class="input" />
-            </div>
-            <div>
-              <label class="sr-only" for="email">Email</label>
-              <input id="email" type="email" required placeholder="Your email" class="input" />
-            </div>
-            <div>
-              <label class="sr-only" for="message">Message</label>
-              <textarea id="message" required rows="4" placeholder="How can I help?" class="input"></textarea>
-            </div>
-            <button class="inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-2.5 text-sm font-medium text-ink-900 shadow-soft hover:translate-y-[-1px] transition">Send</button>
-            <p id="form-success" class="hidden text-xs text-green-300">Thanks! I'll get back to you shortly.</p>
-          </form>
+        <div class="text-center">
+          <h2 class="text-xl font-semibold text-white">Let's connect</h2>
+          <p class="mt-2 text-sm text-ink-300">Available for freelance projects and full‑time opportunities.</p>
+          <ul class="mt-6 space-y-3 text-sm text-ink-200">
+            <li>Email: <a class="underline underline-offset-4 hover:text-white" href="mailto:at.renatocruz@gmail.com">at.renatocruz@gmail.com</a></li>
+            <li>LinkedIn: <a class="underline underline-offset-4 hover:text-white" href="https://www.linkedin.com/in/renatopcruz/" target="_blank" rel="noreferrer">/in/renatopcruz</a></li>
+            <li>Phone: <span class="text-ink-200">+351 915 360 275</span></li>
+          </ul>
         </div>
       </div>
     </section>
