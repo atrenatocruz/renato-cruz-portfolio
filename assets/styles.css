@@ -1,0 +1,33 @@
+/* Tailwind utilities + small custom helpers */
+.nav-link { @apply text-ink-200 hover:text-white transition-colors duration-200; }
+.skill-card { @apply rounded-2xl border border-white/10 bg-white/5 p-5 shadow-soft hover:border-white/20 transition-all duration-300; }
+.skill-title { @apply text-sm font-semibold text-white; }
+.skill-list { @apply mt-2 space-y-1 text-sm text-ink-300; }
+.project-card { @apply overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-soft hover:border-white/20 hover:shadow-lg transition-all duration-300; }
+.project-image { @apply h-40 w-full object-cover transition-transform duration-300; }
+.project-card:hover .project-image { @apply scale-105; }
+.tag { @apply rounded-full bg-white/10 px-2.5 py-1 text-xs text-white/80; }
+.input { @apply w-full rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-ink-400 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all duration-200; }
+
+/* Smooth scrolling for the entire page */
+html { scroll-behavior: smooth; }
+
+/* Simple reveal animation */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #1a2130; }
+::-webkit-scrollbar-thumb { background: #475775; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #62728f; }
+
+/* Focus styles for accessibility */
+a:focus, button:focus, input:focus, textarea:focus { 
+  outline: 2px solid #ffffff; 
+  outline-offset: 2px; 
+}
+
+/* Loading animation for images */
+img { transition: opacity 0.3s ease; }
+img[src=""] { opacity: 0; }

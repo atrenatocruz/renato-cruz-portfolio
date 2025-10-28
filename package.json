@@ -1,0 +1,29 @@
+{
+  "name": "renato-cruz-portfolio",
+  "version": "1.0.0",
+  "description": "Modern, responsive portfolio website for Renato Cruz - Full-Stack Web Developer",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx serve .",
+    "build": "echo 'Static site - no build process needed'",
+    "deploy": "echo 'Ready for deployment to any static hosting service'"
+  },
+  "keywords": [
+    "portfolio",
+    "web-developer",
+    "responsive",
+    "tailwind",
+    "javascript"
+  ],
+  "author": "Renato Cruz",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renato/portfolio"
+  },
+  "homepage": "https://renatocruz.dev"
+}
