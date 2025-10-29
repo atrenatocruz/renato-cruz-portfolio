@@ -102,6 +102,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 /* Enhanced mobile responsiveness */
+@media (max-width: 767px) {
+  /* Ensure header is visible and sticky on mobile */
+  header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+}
+
 @media (max-width: 640px) {
   /* Improve text readability on small screens */
   body {
