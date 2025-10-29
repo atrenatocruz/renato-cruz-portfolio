@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#1a2130" />
-    <meta name="color-scheme" content="dark" />
-    <title>Renato Cruz — OutSystems Developer | Portfolio</title>
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="light" />
+    <title>Renato Cruz — OutSystems Developer</title>
     <meta name="description" content="OutSystems Developer crafting elegant, maintainable solutions across Traditional, Reactive Web and Mobile. Experience with integrations, Java, JavaScript, SQL." />
     <meta name="keywords" content="OutSystems, OutSystems Developer, Low-code, Reactive Web, Mobile, Traditional, Java, JavaScript, SQL, Lisbon" />
     <meta name="author" content="Renato Cruz" />
@@ -24,70 +24,45 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica", "Arial", "sans-serif"],
-            },
-            colors: {
-              ink: {
-                50: "#f6f7f8",
-                100: "#edeff1",
-                200: "#d9dde3",
-                300: "#b9c0cc",
-                400: "#8a97ad",
-                500: "#62728f",
-                600: "#475775",
-                700: "#38455e",
-                800: "#303a4e",
-                900: "#2a3343",
-                950: "#1a2130",
-              },
-            },
-            boxShadow: {
-              soft: "0 1px 2px rgb(0 0 0 / 0.06), 0 10px 30px rgb(0 0 0 / 0.08)",
+              sans: ["-apple-system", "BlinkMacSystemFont", "SF Pro Display", "SF Pro Text", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
             },
           },
         },
       };
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
-  <body class="font-sans bg-ink-950 text-ink-100 selection:bg-white/20 selection:text-white">
+  <body class="font-sans bg-white text-gray-900 antialiased">
     <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-ink-900 focus:rounded-lg focus:font-semibold">Skip to main content</a>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-gray-900 focus:text-white focus:rounded-lg focus:font-semibold">Skip to main content</a>
     
-    <!-- Navigation -->
-    <header class="fixed inset-x-0 top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-ink-950/40">
-      <nav class="mx-auto max-w-7xl px-4 sm:px-6" aria-label="Main navigation">
-        <div class="flex h-16 items-center justify-between">
-          <a href="#home" class="flex items-center gap-2 sm:gap-3 group" aria-label="Home - Renato Cruz Portfolio">
-            <img src="assets/logo.svg" alt="RC++ Logo" class="h-7 w-7 sm:h-8 sm:w-8 rounded-full shadow-soft" width="32" height="32" loading="eager" />
-            <span class="text-xs sm:text-sm font-semibold tracking-wide text-ink-200 group-hover:text-white transition">RENATO CRUZ</span>
+    <!-- Navigation - Apple style minimal -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl supports-[backdrop-filter]:bg-white/80">
+      <nav class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+        <div class="flex h-14 items-center justify-between">
+          <a href="#home" class="text-base font-medium text-gray-900 hover:text-gray-600 transition-colors" aria-label="Home - Renato Cruz Portfolio">
+            Renato Cruz
           </a>
           
           <!-- Desktop Navigation -->
-          <div class="hidden md:flex items-center gap-6 text-sm">
-            <a href="#about" class="nav-link" aria-label="Navigate to About section">About</a>
-            <a href="#skills" class="nav-link" aria-label="Navigate to Skills section">Skills</a>
-            <a href="#projects" class="nav-link" aria-label="Navigate to Projects section">Projects</a>
-            <a href="#contact" class="nav-link" aria-label="Navigate to Contact section">Contact</a>
+          <div class="hidden md:flex items-center gap-8 text-sm">
+            <a href="#about" class="nav-link-apple" aria-label="Navigate to About section">About</a>
+            <a href="#skills" class="nav-link-apple" aria-label="Navigate to Skills section">Skills</a>
+            <a href="#projects" class="nav-link-apple" aria-label="Navigate to Projects section">Projects</a>
+            <a href="#contact" class="nav-link-apple" aria-label="Navigate to Contact section">Contact</a>
           </div>
-          
-          <!-- Desktop CTA Button -->
-          <a href="#contact" class="hidden md:inline-flex rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-ink-900 hover:bg-white transition shadow-soft min-h-[44px] items-center" aria-label="Get in touch">Get in touch</a>
           
           <!-- Mobile Menu Button -->
           <button 
             id="mobile-menu-button"
-            class="md:hidden p-2 rounded-lg text-ink-200 hover:text-white hover:bg-white/10 transition focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ink-950 min-w-[44px] min-h-[44px] flex items-center justify-center"
+            class="md:hidden p-2 -mr-2 text-gray-900 hover:text-gray-600 transition focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Toggle mobile menu"
             aria-expanded="false"
             aria-controls="mobile-menu"
           >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-              <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+              <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
         </div>
@@ -95,15 +70,14 @@
         <!-- Mobile Menu -->
         <div 
           id="mobile-menu"
-          class="hidden md:hidden pb-4 border-t border-white/10 mt-2 pt-4"
+          class="hidden md:hidden pb-6 pt-4 border-t border-gray-200"
           role="menu"
         >
-          <div class="flex flex-col gap-2">
-            <a href="#about" class="nav-link-mobile" role="menuitem">About</a>
-            <a href="#skills" class="nav-link-mobile" role="menuitem">Skills</a>
-            <a href="#projects" class="nav-link-mobile" role="menuitem">Projects</a>
-            <a href="#contact" class="nav-link-mobile" role="menuitem">Contact</a>
-            <a href="#contact" class="nav-link-mobile-cta mt-2" role="menuitem">Get in touch</a>
+          <div class="flex flex-col gap-1">
+            <a href="#about" class="nav-link-mobile-apple" role="menuitem">About</a>
+            <a href="#skills" class="nav-link-mobile-apple" role="menuitem">Skills</a>
+            <a href="#projects" class="nav-link-mobile-apple" role="menuitem">Projects</a>
+            <a href="#contact" class="nav-link-mobile-apple" role="menuitem">Contact</a>
           </div>
         </div>
       </nav>
@@ -111,193 +85,122 @@
 
     <!-- Main Content -->
     <main id="main-content">
-    <!-- Hero -->
-    <section id="home" class="relative isolate overflow-hidden pt-24 pb-16 md:pt-32 md:pb-20">
-      <!-- Enhanced background with multiple gradient layers -->
-      <div class="absolute inset-0 -z-10">
-        <div class="absolute -top-40 left-1/2 -translate-x-1/2 h-[600px] w-[1000px] md:h-[800px] md:w-[1400px] rounded-full bg-gradient-to-br from-blue-500/20 via-purple-500/15 to-pink-500/10 blur-3xl"></div>
-        <div class="absolute top-1/2 right-1/4 h-[300px] w-[400px] md:h-[400px] md:w-[600px] rounded-full bg-gradient-to-l from-cyan-400/10 to-transparent blur-2xl"></div>
-        <div class="absolute bottom-0 left-1/4 h-[200px] w-[300px] md:h-[300px] md:w-[500px] rounded-full bg-gradient-to-r from-indigo-500/10 to-transparent blur-2xl"></div>
-      </div>
-
-      <div class="mx-auto max-w-7xl px-4 md:px-6">
-        <div class="grid items-center gap-8 md:gap-12 lg:gap-16 lg:grid-cols-2">
-          <div class="space-y-6 md:space-y-8 lg:space-y-10">
-            <!-- Enhanced status chips -->
-            <div class="flex flex-wrap items-center gap-3">
-              <div class="status-chip group">
-                <div class="status-chip-icon">🚀</div>
-                <span class="status-chip-text">OutSystems Developer</span>
-                <div class="status-chip-glow"></div>
-              </div>
-              <div class="status-chip group">
-                <div class="status-chip-icon">✨</div>
-                <span class="status-chip-text">Open to opportunities</span>
-                <div class="status-chip-glow"></div>
-              </div>
-            </div>
-
-            <!-- Enhanced headline with gradient text -->
-            <div class="space-y-4 md:space-y-6">
-              <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
-                <span class="block">Elegant</span>
-                <span class="block gradient-text">low‑code</span>
-                <span class="block">solutions</span>
-              </h1>
-              <div class="space-y-3 md:space-y-4">
-                <p class="text-lg md:text-xl text-ink-200 leading-relaxed max-w-2xl">
-                  Hard‑working OutSystems developer crafting elegant, maintainable solutions across Traditional, Reactive Web and Mobile platforms.
-                </p>
-                <p class="text-base md:text-lg text-ink-300">
-                  Specializing in integrations, performance optimization, and delivering results fast.
-                </p>
-              </div>
-            </div>
-
-            <!-- Enhanced CTA buttons -->
-            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
-              <a href="#projects" class="cta-primary text-center">
-                <span>View projects</span>
-                <span class="ml-2">→</span>
-              </a>
-              <a href="#contact" class="cta-secondary text-center">
-                <span>Get in touch</span>
-                <span class="ml-2">💬</span>
-              </a>
-            </div>
-
-            <!-- Enhanced tech stack -->
-            <div class="tech-stack">
-              <div class="tech-stack-item">
-                <div class="tech-stack-icon">⚡</div>
-                <span class="tech-stack-text">OutSystems</span>
-              </div>
-              <div class="tech-stack-item">
-                <div class="tech-stack-icon">☕</div>
-                <span class="tech-stack-text">Java</span>
-              </div>
-              <div class="tech-stack-item">
-                <div class="tech-stack-icon">🟨</div>
-                <span class="tech-stack-text">JavaScript</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Enhanced profile section -->
-          <div class="flex justify-center lg:justify-end order-first lg:order-last">
-            <div class="relative">
-              <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-white/20 to-transparent blur-2xl"></div>
-              <img src="assets/profile.jpg" alt="Renato Cruz portrait" class="h-64 w-64 sm:h-72 sm:w-72 md:h-80 md:w-80 rounded-full object-cover ring-2 ring-white/20 shadow-2xl" loading="eager" width="320" height="320" />
-            </div>
+    
+    <!-- Hero Section - Apple style -->
+    <section id="home" class="relative bg-white pt-20 pb-28 md:pt-32 md:pb-40">
+      <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <!-- Main Headline - Apple style bold -->
+          <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-tight text-gray-900 mb-6">
+            OutSystems
+            <span class="block mt-2">Developer.</span>
+          </h1>
+          
+          <!-- Subheadline -->
+          <p class="text-xl sm:text-2xl md:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto font-light">
+            Crafting elegant, maintainable solutions across Traditional, Reactive Web and Mobile platforms.
+          </p>
+          
+          <!-- Links - Apple style -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-lg">
+            <a href="#projects" class="link-apple">
+              View projects
+              <span class="inline-block ml-1.5">→</span>
+            </a>
+            <a href="#contact" class="link-apple text-blue-600 hover:text-blue-700">
+              Get in touch
+              <span class="inline-block ml-1.5">→</span>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="mx-auto max-w-6xl px-4 sm:px-6 md:px-6 py-12 sm:py-16 md:py-24">
-      <div class="grid gap-8 md:gap-12 md:grid-cols-3">
-        <div class="space-y-4">
-          <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
-            <div class="text-2xl">👨‍💻</div>
-            <h2 class="text-xl font-semibold text-white">About</h2>
-          </div>
-          <p class="text-sm text-ink-300 leading-relaxed">🎓 Education • 🌟 Background • 🎯 Focus</p>
-        </div>
-        <div class="md:col-span-2 space-y-6 md:space-y-8">
-          <div class="space-y-4 md:space-y-6">
-            <p class="text-base md:text-lg text-ink-100 leading-relaxed">
-              🚀 I'm an OutSystems Developer focused on building robust business applications—fast. I design, implement
-              and maintain Traditional and Reactive Web apps, as well as Mobile apps, integrating external APIs and
-              optimizing for maintainability and performance.
+    <!-- About Section -->
+    <section id="about" class="bg-white py-20 md:py-32">
+      <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-8 tracking-tight">
+            About
+          </h2>
+          <div class="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed">
+            <p>
+              I'm an OutSystems Developer focused on building robust business applications—fast. I design, implement and maintain Traditional and Reactive Web apps, as well as Mobile apps, integrating external APIs and optimizing for maintainability and performance.
             </p>
-            <p class="text-sm md:text-base text-ink-200 leading-relaxed">
-              💼 Recent roles include enhancing COE applications at Vopak, delivering new features for Albert Heijn,
-              and building solutions with Everis, Ericsson, and initiatives like #EntraEmCena. I care about clear UX,
-              reliable data flows, and clean, testable logic.
+            <p>
+              Recent roles include enhancing COE applications at Vopak, delivering new features for Albert Heijn, and building solutions with Everis, Ericsson, and initiatives like #EntraEmCena. I care about clear UX, reliable data flows, and clean, testable logic.
             </p>
           </div>
           
-          <div class="grid gap-4 sm:grid-cols-2">
-            <div class="info-card">
-              <div class="info-icon">🎓</div>
-              <div class="info-content">
-                <p class="info-label">Education</p>
-                <p class="info-title">Full‑Stack Bootcamp</p>
-                <p class="info-subtitle">Academia de Código</p>
-                <p class="info-date">Sep 2019 – Dec 2019</p>
-              </div>
+          <!-- Info Grid -->
+          <div class="mt-16 grid gap-6 sm:grid-cols-2">
+            <div>
+              <p class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Education</p>
+              <p class="text-lg font-medium text-gray-900">Full‑Stack Bootcamp</p>
+              <p class="text-lg text-gray-600">Academia de Código</p>
+              <p class="text-base text-gray-500 mt-1">Sep 2019 – Dec 2019</p>
             </div>
             
-            <div class="info-card">
-              <div class="info-icon">📍</div>
-              <div class="info-content">
-                <p class="info-label">Location</p>
-                <p class="info-title">🇵🇹 Portugal</p>
-              </div>
+            <div>
+              <p class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Location</p>
+              <p class="text-lg font-medium text-gray-900">Portugal</p>
             </div>
             
-            <div class="info-card">
-              <div class="info-icon">💼</div>
-              <div class="info-content">
-                <p class="info-label">Experience</p>
-                <p class="info-title">5+ years building for web</p>
-              </div>
+            <div>
+              <p class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Experience</p>
+              <p class="text-lg font-medium text-gray-900">5+ years building for web</p>
             </div>
             
-            <div class="info-card">
-              <div class="info-icon">🎯</div>
-              <div class="info-content">
-                <p class="info-label">Interests</p>
-                <p class="info-title">Low‑code, integrations, performance</p>
-              </div>
+            <div>
+              <p class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Focus</p>
+              <p class="text-lg font-medium text-gray-900">Low‑code, integrations, performance</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="mx-auto max-w-7xl px-4 sm:px-6 md:px-6 py-12 md:py-16">
-      <div class="rounded-3xl border border-white/10 bg-gradient-to-b from-white/5 to-white/[0.03] p-6 md:p-8 shadow-soft">
-        <div class="flex items-end justify-between gap-6 flex-wrap">
+    <!-- Skills Section -->
+    <section id="skills" class="bg-gray-50 py-20 md:py-32">
+      <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-16 tracking-tight">
+          Skills
+        </h2>
+        
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h2 class="text-xl font-semibold text-white">🛠️ Skills</h2>
-            <p class="mt-1 text-sm text-ink-300">⚡ OutSystems platform • 🌐 Web • 📱 Mobile • 🔗 Integrations</p>
-          </div>
-          <div class="text-xs text-ink-300">📚 Always learning</div>
-        </div>
-        <div class="mt-6 md:mt-8 grid gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="skill-card">
-            <h3 class="skill-title">⚡ Platform</h3>
-            <ul class="skill-list">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Platform</h3>
+            <ul class="space-y-2 text-base text-gray-600">
               <li>OutSystems Traditional</li>
               <li>OutSystems Reactive Web</li>
               <li>OutSystems Mobile</li>
               <li>Integrations & APIs</li>
             </ul>
           </div>
-          <div class="skill-card">
-            <h3 class="skill-title">💻 Languages</h3>
-            <ul class="skill-list">
-              <li>☕ Java</li>
-              <li>🟨 JavaScript</li>
-              <li>🗄️ SQL</li>
-              <li>🌐 HTML, CSS</li>
+          
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Languages</h3>
+            <ul class="space-y-2 text-base text-gray-600">
+              <li>Java</li>
+              <li>JavaScript</li>
+              <li>SQL</li>
+              <li>HTML, CSS</li>
             </ul>
           </div>
-          <div class="skill-card">
-            <h3 class="skill-title">🗄️ Databases</h3>
-            <ul class="skill-list">
+          
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Databases</h3>
+            <ul class="space-y-2 text-base text-gray-600">
               <li>SQL Server</li>
               <li>MySQL</li>
               <li>Oracle (familiar)</li>
               <li>Entity & Data modeling</li>
             </ul>
           </div>
-          <div class="skill-card">
-            <h3 class="skill-title">🎯 Practices</h3>
-            <ul class="skill-list">
+          
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Practices</h3>
+            <ul class="space-y-2 text-base text-gray-600">
               <li>Clean, maintainable modules</li>
               <li>API design & auth</li>
               <li>Performance & UX</li>
@@ -308,122 +211,156 @@
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="mx-auto max-w-7xl px-4 sm:px-6 md:px-6 py-12 md:py-16">
-      <div class="flex items-end justify-between gap-6 flex-wrap">
-        <div>
-          <h2 class="text-xl font-semibold text-white">🚀 Recent work</h2>
-          <p class="mt-1 text-sm text-ink-300">💼 Highlights across OutSystems Traditional, Reactive Web & Mobile</p>
+    <!-- Projects Section -->
+    <section id="projects" class="bg-white py-20 md:py-32">
+      <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-16 tracking-tight">
+          Recent Work
+        </h2>
+
+        <div class="grid gap-12 md:gap-16 lg:gap-20">
+          <!-- Project 1 -->
+          <article class="project-apple">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div class="order-2 md:order-1">
+                <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">Vopak — OutSystems COE</h3>
+                <p class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-4">Traditional • Reactive • Mobile</p>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                  Enhancing and maintaining COE applications, small app improvements, and integrating external APIs to extend system capabilities; mobile apps within OutSystems.
+                </p>
+                <p class="text-base text-gray-500">Jan 2022 – Present</p>
+              </div>
+              <div class="order-1 md:order-2 bg-gray-100 rounded-2xl h-64 md:h-80 flex items-center justify-center">
+                <span class="text-6xl md:text-8xl">🏢</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-apple">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div class="bg-gray-100 rounded-2xl h-64 md:h-80 flex items-center justify-center">
+                <span class="text-6xl md:text-8xl">🛒</span>
+              </div>
+              <div>
+                <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">Albert Heijn</h3>
+                <p class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-4">Traditional • Reactive</p>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                  Delivered features to sponsored products app, resolved defects, and supported application migration.
+                </p>
+                <p class="text-base text-gray-500">Feb 2021 – Jan 2022</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-apple">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div class="order-2 md:order-1">
+                <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">Everis</h3>
+                <p class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-4">Reactive • Mobile</p>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                  Built an app to manage evolving office space needs in response to COVID‑19 constraints.
+                </p>
+                <p class="text-base text-gray-500">Dec 2020 – Jan 2021</p>
+              </div>
+              <div class="order-1 md:order-2 bg-gray-100 rounded-2xl h-64 md:h-80 flex items-center justify-center">
+                <span class="text-6xl md:text-8xl">🏢</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-apple">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div class="bg-gray-100 rounded-2xl h-64 md:h-80 flex items-center justify-center">
+                <span class="text-6xl md:text-8xl">📡</span>
+              </div>
+              <div>
+                <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">Ericsson</h3>
+                <p class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-4">Traditional Web</p>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                  Developed application features for Ericsson in collaboration with TCS.
+                </p>
+                <p class="text-base text-gray-500">Mar 2020 – Nov 2020</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-apple">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div class="order-2 md:order-1">
+                <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">#EntraEmCena</h3>
+                <p class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-4">Reactive Web</p>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                  COVID‑19 initiative with OutSystems to support cultural sector needs.
+                </p>
+                <p class="text-base text-gray-500">Feb 2020 – Mar 2020</p>
+              </div>
+              <div class="order-1 md:order-2 bg-gray-100 rounded-2xl h-64 md:h-80 flex items-center justify-center">
+                <span class="text-6xl md:text-8xl">🎭</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project-apple">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+              <div class="bg-gray-100 rounded-2xl h-64 md:h-80 flex items-center justify-center">
+                <span class="text-6xl md:text-8xl">💼</span>
+              </div>
+              <div>
+                <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">CodeForAll — Finance & HR</h3>
+                <p class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-4">Reactive Web • Mobile</p>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                  Responsive platform to manage finance and HR—combining functionality and adaptability.
+                </p>
+                <p class="text-base text-gray-500">Jan 2020 – Feb 2020</p>
+              </div>
+            </div>
+          </article>
         </div>
-        <span class="text-sm text-ink-300">📅 2019 — Present</span>
-      </div>
-
-      <div class="mt-8 md:mt-12 grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <article class="project-card">
-          <div class="project-image-placeholder bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
-            <div class="text-4xl md:text-6xl">🏢</div>
-          </div>
-          <div class="p-4 md:p-6">
-            <div class="flex items-start justify-between mb-3">
-              <h3 class="text-base md:text-lg font-semibold text-white">Vopak — OutSystems COE</h3>
-              <div class="tag">Traditional • Reactive • Mobile</div>
-            </div>
-            <p class="text-sm text-ink-300 leading-relaxed mb-4">Enhancing and maintaining COE applications, small app improvements, and integrating external APIs to extend system capabilities; mobile apps within OutSystems.</p>
-            <div class="text-xs text-ink-400 font-medium">Jan 2022 – Present</div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-image-placeholder bg-gradient-to-br from-green-500/20 to-teal-500/20 flex items-center justify-center">
-            <div class="text-4xl md:text-6xl">🛒</div>
-          </div>
-          <div class="p-4 md:p-6">
-            <div class="flex items-start justify-between mb-3">
-              <h3 class="text-base md:text-lg font-semibold text-white">Albert Heijn (via CodeForAll)</h3>
-              <div class="tag">Traditional • Reactive</div>
-            </div>
-            <p class="text-sm text-ink-300 leading-relaxed mb-4">Delivered features to sponsored products app, resolved defects, and supported application migration.</p>
-            <div class="text-xs text-ink-400 font-medium">Feb 2021 – Jan 2022</div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-image-placeholder bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center">
-            <div class="text-4xl md:text-6xl">🏢</div>
-          </div>
-          <div class="p-4 md:p-6">
-            <div class="flex items-start justify-between mb-3">
-              <h3 class="text-base md:text-lg font-semibold text-white">Everis (via CodeForAll)</h3>
-              <div class="tag">Reactive • Mobile</div>
-            </div>
-            <p class="text-sm text-ink-300 leading-relaxed mb-4">Built an app to manage evolving office space needs in response to COVID‑19 constraints.</p>
-            <div class="text-xs text-ink-400 font-medium">Dec 2020 – Jan 2021</div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-image-placeholder bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
-            <div class="text-4xl md:text-6xl">📡</div>
-          </div>
-          <div class="p-4 md:p-6">
-            <div class="flex items-start justify-between mb-3">
-              <h3 class="text-base md:text-lg font-semibold text-white">Ericsson (with TCS, via CodeForAll)</h3>
-              <div class="tag">Traditional Web</div>
-            </div>
-            <p class="text-sm text-ink-300 leading-relaxed mb-4">Developed application features for Ericsson in collaboration with TCS.</p>
-            <div class="text-xs text-ink-400 font-medium">Mar 2020 – Nov 2020</div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-image-placeholder bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center">
-            <div class="text-4xl md:text-6xl">🎭</div>
-          </div>
-          <div class="p-4 md:p-6">
-            <div class="flex items-start justify-between mb-3">
-              <h3 class="text-base md:text-lg font-semibold text-white">#EntraEmCena (Ministry of Culture)</h3>
-              <div class="tag">Reactive Web</div>
-            </div>
-            <p class="text-sm text-ink-300 leading-relaxed mb-4">COVID‑19 initiative with OutSystems to support cultural sector needs.</p>
-            <div class="text-xs text-ink-400 font-medium">Feb 2020 – Mar 2020</div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-image-placeholder bg-gradient-to-br from-indigo-500/20 to-blue-500/20 flex items-center justify-center">
-            <div class="text-4xl md:text-6xl">💼</div>
-          </div>
-          <div class="p-4 md:p-6">
-            <div class="flex items-start justify-between mb-3">
-              <h3 class="text-base md:text-lg font-semibold text-white">CodeForAll — Finance & HR platform</h3>
-              <div class="tag">Reactive Web • Mobile</div>
-            </div>
-            <p class="text-sm text-ink-300 leading-relaxed mb-4">Responsive platform to manage finance and HR—combining functionality and adaptability.</p>
-            <div class="text-xs text-ink-400 font-medium">Jan 2020 – Feb 2020</div>
-          </div>
-        </article>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="mx-auto max-w-5xl px-4 sm:px-6 md:px-6 pb-12 sm:pb-16 md:pb-24">
-      <div class="rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 shadow-soft">
-        <div class="text-center">
-          <h2 class="text-xl font-semibold text-white">Let's connect</h2>
-          <p class="mt-2 text-sm text-ink-300">Available for freelance projects and full‑time opportunities.</p>
-          <ul class="mt-6 space-y-3 text-sm text-ink-200">
-            <li>Email: <a class="underline underline-offset-4 hover:text-white" href="mailto:at.renatocruz@gmail.com">at.renatocruz@gmail.com</a></li>
-            <li>LinkedIn: <a class="underline underline-offset-4 hover:text-white" href="https://www.linkedin.com/in/renatopcruz/" target="_blank" rel="noreferrer">/in/renatopcruz</a></li>
-            <li>Phone: <span class="text-ink-200">+351 915 360 275</span></li>
-          </ul>
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-50 py-20 md:py-32">
+      <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-8 tracking-tight">
+            Let's connect
+          </h2>
+          <p class="text-xl text-gray-600 mb-12">
+            Available for freelance projects and full‑time opportunities.
+          </p>
+          <div class="space-y-4 text-lg text-gray-600">
+            <div>
+              <a href="mailto:at.renatocruz@gmail.com" class="link-apple text-blue-600 hover:text-blue-700">
+                at.renatocruz@gmail.com
+              </a>
+            </div>
+            <div>
+              <a href="https://www.linkedin.com/in/renatopcruz/" target="_blank" rel="noreferrer" class="link-apple text-blue-600 hover:text-blue-700">
+                LinkedIn
+              </a>
+            </div>
+            <div class="text-gray-600">
+              +351 915 360 275
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     </main>
     
-    <footer class="mx-auto max-w-7xl px-4 md:px-6 pb-8 md:pb-10 text-center text-xs text-ink-400">
-      © <span id="year"></span> Renato Cruz. Built with care.
+    <footer class="bg-white border-t border-gray-200 py-8">
+      <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+        <p class="text-center text-sm text-gray-500">
+          © <span id="year"></span> Renato Cruz. All rights reserved.
+        </p>
+      </div>
     </footer>
 
     <script src="assets/script.js"></script>

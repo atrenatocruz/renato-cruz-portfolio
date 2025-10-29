@@ -20,8 +20,8 @@ for (const link of document.querySelectorAll('a[href^="#"]')) {
       if (closeIcon) closeIcon.classList.add('hidden');
     }
     
-    // Add offset for fixed header
-    const headerHeight = 64;
+    // Add offset for sticky header
+    const headerHeight = 56;
     const elementPosition = el.getBoundingClientRect().top + window.pageYOffset - headerHeight;
     
     window.scrollTo({
@@ -52,30 +52,30 @@ for (const section of document.querySelectorAll('section')) {
   observer.observe(section);
 }
 
-for (const card of document.querySelectorAll('.project-card, .skill-card')) {
+for (const card of document.querySelectorAll('.project-apple')) {
   card.classList.add('reveal');
   observer.observe(card);
 }
 
-// Active navigation link highlighting
+// Active navigation link highlighting - Apple style
 const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
+const navLinks = document.querySelectorAll('.nav-link-apple');
 
 function updateActiveNavLink() {
   let current = '';
   sections.forEach(section => {
     const sectionTop = section.getBoundingClientRect().top;
-    if (sectionTop <= 100) {
+    if (sectionTop <= 150) {
       current = section.getAttribute('id');
     }
   });
 
   navLinks.forEach(link => {
-    link.classList.remove('text-white');
-    link.classList.add('text-ink-200');
+    link.classList.remove('text-gray-600', 'font-medium');
+    link.classList.add('text-gray-900');
     if (link.getAttribute('href') === `#${current}`) {
-      link.classList.remove('text-ink-200');
-      link.classList.add('text-white');
+      link.classList.remove('text-gray-900');
+      link.classList.add('text-gray-600', 'font-medium');
     }
   });
 }
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenu = document.getElementById('mobile-menu');
   const menuIcon = document.getElementById('menu-icon');
   const closeIcon = document.getElementById('close-icon');
-  const mobileMenuLinks = document.querySelectorAll('.nav-link-mobile, .nav-link-mobile-cta');
+  const mobileMenuLinks = document.querySelectorAll('.nav-link-mobile-apple');
 
   if (menuButton && mobileMenu) {
     menuButton.addEventListener('click', () => {
