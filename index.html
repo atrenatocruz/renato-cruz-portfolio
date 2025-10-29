@@ -37,7 +37,7 @@
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-gray-900 focus:text-white focus:rounded-lg focus:font-semibold">Skip to main content</a>
     
     <!-- Navigation - Apple style minimal -->
-    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl supports-[backdrop-filter]:bg-white/80">
+    <header class="md:sticky top-0 z-50 bg-white/80 backdrop-blur-xl supports-[backdrop-filter]:bg-white/80">
       <nav class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
         <div class="flex h-14 items-center justify-between">
           <a href="#home" class="text-base font-medium text-gray-900 hover:text-gray-600 transition-colors" aria-label="Home - Renato Cruz Portfolio">
@@ -87,7 +87,7 @@
     <main id="main-content">
     
     <!-- Hero Section - Apple style with profile -->
-    <section id="home" class="relative bg-gradient-to-b from-gray-50 to-white pt-20 pb-28 md:pt-32 md:pb-40 overflow-hidden">
+    <section id="home" class="relative pt-20 pb-28 md:pt-32 md:pb-40 overflow-hidden">
       <!-- Subtle background decoration -->
       <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div class="absolute -top-40 -right-40 w-80 h-80 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
@@ -134,7 +134,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="bg-white py-20 md:py-32">
+    <section id="about" class="py-20 md:py-32">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl">
           <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-8 tracking-tight">
@@ -150,44 +150,46 @@
           </div>
           
           <!-- Info Grid -->
-          <div class="mt-16 grid gap-8 sm:grid-cols-2">
-            <div class="info-card-elegant">
-              <p class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Education</p>
-              <p class="text-lg font-medium text-gray-900">Full‑Stack Bootcamp</p>
-              <p class="text-lg text-gray-600">Academia de Código</p>
-              <p class="text-base text-gray-500 mt-1">Sep 2019 – Dec 2019</p>
-            </div>
-            
-            <div class="info-card-elegant">
-              <p class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Location</p>
-              <p class="text-lg font-medium text-gray-900">Portugal</p>
-            </div>
-            
-            <div class="info-card-elegant">
-              <p class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Experience</p>
-              <p class="text-lg font-medium text-gray-900">5+ years building for web</p>
-            </div>
-            
-            <div class="info-card-elegant">
-              <p class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Focus</p>
-              <p class="text-lg font-medium text-gray-900">Low‑code, integrations, performance</p>
-            </div>
+          <div class="mt-16 grid gap-4 sm:gap-8 sm:grid-cols-2">
+          <div class="info-card-elegant">
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Education</p>
+            <p class="text-2xl font-semibold text-gray-900 mb-1 leading-tight">Full‑Stack Bootcamp</p>
+            <p class="text-lg text-gray-600 mb-2">Academia de Código</p>
+            <p class="text-sm text-gray-400 mt-3">Sep 2019 – Dec 2019</p>
+          </div>
+          
+          <div class="info-card-elegant">
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Location</p>
+            <p class="text-2xl font-semibold text-gray-900">Lisbon, Portugal</p>
+          </div>
+          
+          <div class="info-card-elegant">
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Experience</p>
+            <p class="text-2xl font-semibold text-gray-900">5+ years</p>
+            <p class="text-base text-gray-500 mt-2">building for web</p>
+          </div>
+          
+          <div class="info-card-elegant">
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Focus</p>
+            <p class="text-2xl font-semibold text-gray-900 mb-2">Quality & Performance</p>
+            <p class="text-base text-gray-500">maintainable code, scalable architectures</p>
+          </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="bg-gray-50 py-20 md:py-32">
+    <section id="skills" class="py-20 md:py-32">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-16 tracking-tight">
           Skills
         </h2>
         
-        <div class="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="grid gap-4 sm:gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div class="skill-card-elegant">
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">Platform</h3>
-            <ul class="space-y-2 text-base text-gray-600">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 tracking-tight">Platform</h3>
+            <ul class="space-y-3 text-base text-gray-700 leading-relaxed">
               <li>OutSystems Traditional</li>
               <li>OutSystems Reactive Web</li>
               <li>OutSystems Mobile</li>
@@ -196,8 +198,8 @@
           </div>
           
           <div class="skill-card-elegant">
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">Languages</h3>
-            <ul class="space-y-2 text-base text-gray-600">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 tracking-tight">Languages</h3>
+            <ul class="space-y-3 text-base text-gray-700 leading-relaxed">
               <li>Java</li>
               <li>JavaScript</li>
               <li>SQL</li>
@@ -206,8 +208,8 @@
           </div>
           
           <div class="skill-card-elegant">
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">Databases</h3>
-            <ul class="space-y-2 text-base text-gray-600">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 tracking-tight">Databases</h3>
+            <ul class="space-y-3 text-base text-gray-700 leading-relaxed">
               <li>SQL Server</li>
               <li>MySQL</li>
               <li>Oracle (familiar)</li>
@@ -216,8 +218,8 @@
           </div>
           
           <div class="skill-card-elegant">
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">Practices</h3>
-            <ul class="space-y-2 text-base text-gray-600">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 tracking-tight">Practices</h3>
+            <ul class="space-y-3 text-base text-gray-700 leading-relaxed">
               <li>Clean, maintainable modules</li>
               <li>API design & auth</li>
               <li>Performance & UX</li>
@@ -229,7 +231,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="bg-white py-20 md:py-32">
+    <section id="projects" class="py-20 md:py-32">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-16 tracking-tight">
           Recent Work
@@ -319,7 +321,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-gray-50 py-20 md:py-32">
+    <section id="contact" class="py-20 md:py-32">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div class="max-w-2xl mx-auto">
           <div class="contact-card-elegant text-center">
