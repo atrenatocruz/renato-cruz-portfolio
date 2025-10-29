@@ -33,6 +33,11 @@
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body class="font-sans bg-white text-gray-900 antialiased">
+    <!-- Custom Cursor (desktop only) -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-gray-900 focus:text-white focus:rounded-lg focus:font-semibold">Skip to main content</a>
     
@@ -112,20 +117,18 @@
               <span class="block mt-2">Developer.</span>
             </h1>
             
-            <!-- Subheadline -->
+            <!-- Subheadline with Typewriter Effect -->
             <p class="text-xl sm:text-2xl md:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto lg:mx-0 font-light">
-              Crafting elegant, maintainable solutions across Traditional, Reactive Web and Mobile platforms.
+              <span id="typewriter-text"></span><span class="typing-cursor">|</span>
             </p>
             
             <!-- Links - Apple style -->
             <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 text-lg">
-              <a href="#projects" class="link-apple group">
-                View projects
-                <span class="inline-block ml-1.5 transition-transform duration-200 group-hover:translate-x-1">↓</span>
+              <a href="#projects" class="link-apple text-blue-600 hover:text-blue-700">
+                View projects <span class="inline-block">↓</span>
               </a>
-              <a href="#contact" class="link-apple text-blue-600 hover:text-blue-700 group">
-                Get in touch
-                <span class="inline-block ml-1.5 transition-transform duration-200 group-hover:translate-x-1">↓</span>
+              <a href="#contact" class="link-apple text-blue-600 hover:text-blue-700">
+                Get in touch <span class="inline-block">↓</span>
               </a>
             </div>
           </div>
