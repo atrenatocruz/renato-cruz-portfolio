@@ -179,3 +179,188 @@ a, button {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+
+/* Profile Picture - Elegant styling */
+.profile-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2), 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.profile-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(59, 130, 246, 0.2);
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 640px) {
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Elegant Info Cards */
+.info-card-elegant {
+  @apply p-6 rounded-2xl bg-white border border-gray-200;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info-card-elegant:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Elegant Skill Cards */
+.skill-card-elegant {
+  @apply p-6 rounded-2xl bg-white border border-gray-200;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-card-elegant:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Elegant Project Images */
+.project-image-elegant {
+  @apply bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl h-64 md:h-80 flex items-center justify-center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image-elegant::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-image-elegant:hover::before {
+  opacity: 1;
+}
+
+.project-image-elegant:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.project-image-elegant span {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.project-image-elegant:hover span {
+  transform: scale(1.1);
+}
+
+/* Subtle Background Blob Animation */
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+/* Enhanced Project Cards */
+.project-apple {
+  @apply border-b border-gray-200 pb-12 md:pb-16 last:border-b-0;
+  transition: all 0.3s ease;
+}
+
+.project-apple:hover {
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+/* Enhanced Links with hover effects */
+.link-apple {
+  position: relative;
+}
+
+.link-apple::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.link-apple:hover::after {
+  width: 100%;
+}
+
+/* Enhanced section backgrounds */
+.bg-gray-50 {
+  background-color: #f9fafb;
+}
+
+/* Elegant Contact Card */
+.contact-card-elegant {
+  @apply p-8 md:p-12 rounded-3xl bg-white border border-gray-200;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08), 0 2px 10px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-card-elegant:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12), 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Additional depth for cards on desktop */
+@media (min-width: 768px) {
+  .info-card-elegant,
+  .skill-card-elegant {
+    backdrop-filter: blur(10px);
+  }
+}

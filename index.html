@@ -86,31 +86,48 @@
     <!-- Main Content -->
     <main id="main-content">
     
-    <!-- Hero Section - Apple style -->
-    <section id="home" class="relative bg-white pt-20 pb-28 md:pt-32 md:pb-40">
-      <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-          <!-- Main Headline - Apple style bold -->
-          <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-tight text-gray-900 mb-6">
-            OutSystems
-            <span class="block mt-2">Developer.</span>
-          </h1>
-          
-          <!-- Subheadline -->
-          <p class="text-xl sm:text-2xl md:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto font-light">
-            Crafting elegant, maintainable solutions across Traditional, Reactive Web and Mobile platforms.
-          </p>
-          
-          <!-- Links - Apple style -->
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-lg">
-            <a href="#projects" class="link-apple">
-              View projects
-              <span class="inline-block ml-1.5">→</span>
-            </a>
-            <a href="#contact" class="link-apple text-blue-600 hover:text-blue-700">
-              Get in touch
-              <span class="inline-block ml-1.5">→</span>
-            </a>
+    <!-- Hero Section - Apple style with profile -->
+    <section id="home" class="relative bg-gradient-to-b from-gray-50 to-white pt-20 pb-28 md:pt-32 md:pb-40 overflow-hidden">
+      <!-- Subtle background decoration -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-40 -right-40 w-80 h-80 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+      </div>
+      
+      <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <!-- Text Content -->
+          <div class="flex-1 text-center lg:text-left">
+            <!-- Profile Picture -->
+            <div class="flex justify-center lg:justify-start mb-8 lg:mb-6">
+              <div class="profile-container">
+                <img src="assets/profile.jpg" alt="Renato Cruz" class="profile-image" width="160" height="160" loading="eager" />
+                <div class="profile-ring"></div>
+              </div>
+            </div>
+            
+            <!-- Main Headline - Apple style bold -->
+            <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-tight text-gray-900 mb-6">
+              OutSystems
+              <span class="block mt-2">Developer.</span>
+            </h1>
+            
+            <!-- Subheadline -->
+            <p class="text-xl sm:text-2xl md:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto lg:mx-0 font-light">
+              Crafting elegant, maintainable solutions across Traditional, Reactive Web and Mobile platforms.
+            </p>
+            
+            <!-- Links - Apple style -->
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 text-lg">
+              <a href="#projects" class="link-apple group">
+                View projects
+                <span class="inline-block ml-1.5 transition-transform duration-200 group-hover:translate-x-1">→</span>
+              </a>
+              <a href="#contact" class="link-apple text-blue-600 hover:text-blue-700 group">
+                Get in touch
+                <span class="inline-block ml-1.5 transition-transform duration-200 group-hover:translate-x-1">→</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -134,24 +151,24 @@
           
           <!-- Info Grid -->
           <div class="mt-16 grid gap-6 sm:grid-cols-2">
-            <div>
+            <div class="info-card-elegant">
               <p class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Education</p>
               <p class="text-lg font-medium text-gray-900">Full‑Stack Bootcamp</p>
               <p class="text-lg text-gray-600">Academia de Código</p>
               <p class="text-base text-gray-500 mt-1">Sep 2019 – Dec 2019</p>
             </div>
             
-            <div>
+            <div class="info-card-elegant">
               <p class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Location</p>
               <p class="text-lg font-medium text-gray-900">Portugal</p>
             </div>
             
-            <div>
+            <div class="info-card-elegant">
               <p class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Experience</p>
               <p class="text-lg font-medium text-gray-900">5+ years building for web</p>
             </div>
             
-            <div>
+            <div class="info-card-elegant">
               <p class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">Focus</p>
               <p class="text-lg font-medium text-gray-900">Low‑code, integrations, performance</p>
             </div>
@@ -168,7 +185,7 @@
         </h2>
         
         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          <div>
+          <div class="skill-card-elegant">
             <h3 class="text-xl font-semibold text-gray-900 mb-4">Platform</h3>
             <ul class="space-y-2 text-base text-gray-600">
               <li>OutSystems Traditional</li>
@@ -178,7 +195,7 @@
             </ul>
           </div>
           
-          <div>
+          <div class="skill-card-elegant">
             <h3 class="text-xl font-semibold text-gray-900 mb-4">Languages</h3>
             <ul class="space-y-2 text-base text-gray-600">
               <li>Java</li>
@@ -188,7 +205,7 @@
             </ul>
           </div>
           
-          <div>
+          <div class="skill-card-elegant">
             <h3 class="text-xl font-semibold text-gray-900 mb-4">Databases</h3>
             <ul class="space-y-2 text-base text-gray-600">
               <li>SQL Server</li>
@@ -198,7 +215,7 @@
             </ul>
           </div>
           
-          <div>
+          <div class="skill-card-elegant">
             <h3 class="text-xl font-semibold text-gray-900 mb-4">Practices</h3>
             <ul class="space-y-2 text-base text-gray-600">
               <li>Clean, maintainable modules</li>
@@ -230,7 +247,7 @@
                 </p>
                 <p class="text-base text-gray-500">Jan 2022 – Present</p>
               </div>
-              <div class="order-1 md:order-2 bg-gray-100 rounded-2xl h-64 md:h-80 flex items-center justify-center">
+              <div class="order-1 md:order-2 project-image-elegant">
                 <span class="text-6xl md:text-8xl">🏢</span>
               </div>
             </div>
@@ -239,7 +256,7 @@
           <!-- Project 2 -->
           <article class="project-apple">
             <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div class="bg-gray-100 rounded-2xl h-64 md:h-80 flex items-center justify-center">
+              <div class="project-image-elegant">
                 <span class="text-6xl md:text-8xl">🛒</span>
               </div>
               <div>
@@ -264,7 +281,7 @@
                 </p>
                 <p class="text-base text-gray-500">Dec 2020 – Jan 2021</p>
               </div>
-              <div class="order-1 md:order-2 bg-gray-100 rounded-2xl h-64 md:h-80 flex items-center justify-center">
+              <div class="order-1 md:order-2 project-image-elegant">
                 <span class="text-6xl md:text-8xl">🏢</span>
               </div>
             </div>
@@ -273,7 +290,7 @@
           <!-- Project 4 -->
           <article class="project-apple">
             <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div class="bg-gray-100 rounded-2xl h-64 md:h-80 flex items-center justify-center">
+              <div class="project-image-elegant">
                 <span class="text-6xl md:text-8xl">📡</span>
               </div>
               <div>
@@ -298,7 +315,7 @@
                 </p>
                 <p class="text-base text-gray-500">Feb 2020 – Mar 2020</p>
               </div>
-              <div class="order-1 md:order-2 bg-gray-100 rounded-2xl h-64 md:h-80 flex items-center justify-center">
+              <div class="order-1 md:order-2 project-image-elegant">
                 <span class="text-6xl md:text-8xl">🎭</span>
               </div>
             </div>
@@ -307,7 +324,7 @@
           <!-- Project 6 -->
           <article class="project-apple">
             <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div class="bg-gray-100 rounded-2xl h-64 md:h-80 flex items-center justify-center">
+              <div class="project-image-elegant">
                 <span class="text-6xl md:text-8xl">💼</span>
               </div>
               <div>
@@ -327,26 +344,28 @@
     <!-- Contact Section -->
     <section id="contact" class="bg-gray-50 py-20 md:py-32">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
-        <div class="max-w-2xl mx-auto text-center">
-          <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-8 tracking-tight">
-            Let's connect
-          </h2>
-          <p class="text-xl text-gray-600 mb-12">
-            Available for freelance projects and full‑time opportunities.
-          </p>
-          <div class="space-y-4 text-lg text-gray-600">
-            <div>
-              <a href="mailto:at.renatocruz@gmail.com" class="link-apple text-blue-600 hover:text-blue-700">
-                at.renatocruz@gmail.com
-              </a>
-            </div>
-            <div>
-              <a href="https://www.linkedin.com/in/renatopcruz/" target="_blank" rel="noreferrer" class="link-apple text-blue-600 hover:text-blue-700">
-                LinkedIn
-              </a>
-            </div>
-            <div class="text-gray-600">
-              +351 915 360 275
+        <div class="max-w-2xl mx-auto">
+          <div class="contact-card-elegant text-center">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-8 tracking-tight">
+              Let's connect
+            </h2>
+            <p class="text-xl text-gray-600 mb-12">
+              Available for freelance projects and full‑time opportunities.
+            </p>
+            <div class="space-y-4 text-lg text-gray-600">
+              <div>
+                <a href="mailto:at.renatocruz@gmail.com" class="link-apple text-blue-600 hover:text-blue-700">
+                  at.renatocruz@gmail.com
+                </a>
+              </div>
+              <div>
+                <a href="https://www.linkedin.com/in/renatopcruz/" target="_blank" rel="noreferrer" class="link-apple text-blue-600 hover:text-blue-700">
+                  LinkedIn
+                </a>
+              </div>
+              <div class="text-gray-600">
+                +351 915 360 275
+              </div>
             </div>
           </div>
         </div>
