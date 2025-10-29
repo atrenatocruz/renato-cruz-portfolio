@@ -1,5 +1,51 @@
 /* Enhanced Tailwind utilities + sophisticated custom components */
-.nav-link { @apply text-ink-200 hover:text-white transition-colors duration-200; }
+.nav-link { 
+  @apply text-ink-200 hover:text-white transition-colors duration-200; 
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+/* Mobile Navigation Links */
+.nav-link-mobile {
+  @apply block px-4 py-3 rounded-lg text-ink-200 hover:text-white hover:bg-white/10 transition-colors duration-200 text-base font-medium;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link-mobile-cta {
+  @apply block px-4 py-3 rounded-full bg-white/90 text-ink-900 font-semibold text-center transition-all duration-200 hover:bg-white;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Screen reader only class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only.focus\:not-sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
 
 /* Hero Section Enhancements */
 .gradient-text {
@@ -43,9 +89,10 @@
 
 /* CTA Buttons */
 .cta-primary {
-  @apply inline-flex items-center gap-2 rounded-full px-6 py-3 bg-white text-ink-900 font-semibold text-sm;
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 bg-white text-ink-900 font-semibold text-sm;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  min-height: 44px;
 }
 
 .cta-primary:hover {
@@ -53,14 +100,23 @@
   box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
 }
 
+.cta-primary:active {
+  transform: translateY(0);
+}
+
 .cta-secondary {
-  @apply inline-flex items-center gap-2 rounded-full px-6 py-3 border border-white/30 text-white/90 font-semibold text-sm backdrop-blur-sm;
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 border border-white/30 text-white/90 font-semibold text-sm backdrop-blur-sm;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 44px;
 }
 
 .cta-secondary:hover {
   @apply bg-white/10 border-white/50 text-white;
   transform: translateY(-2px);
+}
+
+.cta-secondary:active {
+  transform: translateY(0);
 }
 
 /* Tech Stack */
@@ -261,6 +317,80 @@ a:focus, button:focus, input:focus, textarea:focus {
   outline-offset: 2px; 
 }
 
+/* Prevent outline on mouse click, keep for keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Enhanced mobile responsiveness */
+@media (max-width: 640px) {
+  /* Better touch targets on mobile */
+  .status-chip {
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+  }
+  
+  .tech-stack-item {
+    min-height: 44px;
+  }
+  
+  /* Improve text readability on small screens */
+  body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+  }
+}
+
+/* Improve landscape mobile experience */
+@media (max-width: 896px) and (orientation: landscape) {
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* Better spacing on very small screens */
+@media (max-width: 374px) {
+  .text-4xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
 /* Loading animation for images */
 img { transition: opacity 0.3s ease; }
 img[src=""] { opacity: 0; }
+
+/* Ensure all links have proper touch targets */
+a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Override for inline text links */
+a[href^="mailto:"], a[href^="http"] {
+  min-height: auto;
+  display: inline;
+}
+
+/* Improved mobile menu animation */
+#mobile-menu {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
