@@ -92,7 +92,10 @@ window.addEventListener('scroll', updateActiveNavLink);
 
 
 // Year
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearElement = document.getElementById('year');
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
 
 // Simple Custom Cursor Effect (Desktop only)
 if (window.innerWidth >= 1024) {
@@ -241,6 +244,59 @@ document.addEventListener('DOMContentLoaded', () => {
       img.style.opacity = '1';
     });
   });
+});
+
+// Theme Toggle Functionality
+document.addEventListener('DOMContentLoaded', () => {
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeToggleMobileNav = document.getElementById('theme-toggle-mobile-nav');
+  const sunIcons = document.querySelectorAll('.sun-icon');
+  const moonIcons = document.querySelectorAll('.moon-icon, .moon-icon-mobile-nav');
+  
+  // Check for saved theme preference or default to light mode
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  
+  // Apply theme on page load
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      document.body.classList.add('dark');
+      document.querySelector('header')?.classList.add('dark');
+      sunIcons.forEach(icon => icon.classList.add('hidden'));
+      moonIcons.forEach(icon => icon.classList.remove('hidden'));
+    } else {
+      document.body.classList.remove('dark');
+      document.querySelector('header')?.classList.remove('dark');
+      sunIcons.forEach(icon => icon.classList.remove('hidden'));
+      moonIcons.forEach(icon => icon.classList.add('hidden'));
+    }
+  }
+  
+  // Apply theme on load (after a short delay to prevent flash)
+  requestAnimationFrame(() => {
+    applyTheme(currentTheme);
+    // Remove preload class after theme is applied
+    setTimeout(() => {
+      document.body.classList.remove('preload');
+    }, 100);
+  });
+  
+  // Toggle theme function
+  function toggleTheme() {
+    const isDark = document.body.classList.contains('dark');
+    const newTheme = isDark ? 'light' : 'dark';
+    
+    applyTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+  }
+  
+  // Add event listeners
+  if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+  }
+  
+  if (themeToggleMobileNav) {
+    themeToggleMobileNav.addEventListener('click', toggleTheme);
+  }
 });
 
 // Mobile menu toggle functionality

@@ -898,3 +898,280 @@ a, button {
 .linkedin-link-group:active {
   transform: scale(0.98);
 }
+
+/* ============================================
+   DARK MODE STYLES with Custom Palette
+   ============================================ */
+
+/* Theme Toggle Button */
+#theme-toggle {
+  @apply p-2 rounded-lg transition-colors duration-200;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #374151;
+  cursor: pointer;
+}
+
+#theme-toggle:hover {
+  background-color: #f3f4f6;
+}
+
+#theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+#theme-toggle:hover svg {
+  transform: rotate(15deg);
+}
+
+/* Dark mode base colors using custom palette */
+body.dark {
+  background-color: #121212 !important;
+  color: #E0E0E0 !important;
+}
+
+body.dark.bg-white {
+  background: linear-gradient(135deg, #121212 0%, #0f0f0f 25%, #121212 50%, #1a1a1a 75%, #121212 100%) !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+}
+
+/* Header dark mode */
+header.dark,
+header.bg-white.dark {
+  background: rgba(18, 18, 18, 0.95) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom-color: #444444 !important;
+}
+
+@media (min-width: 768px) {
+  header.bg-white\/80.dark {
+    background: rgba(18, 18, 18, 0.85) !important;
+  }
+}
+
+/* Navigation links dark mode */
+.dark .nav-link-apple {
+  color: #E0E0E0;
+}
+
+.dark .nav-link-apple:hover {
+  color: #B0B0B0;
+}
+
+.dark .nav-link-mobile-apple {
+  color: #E0E0E0;
+}
+
+.dark .nav-link-mobile-apple:hover {
+  background-color: #444444;
+  color: #E0E0E0;
+}
+
+/* Mobile menu button dark mode */
+.dark #mobile-menu-button {
+  color: #E0E0E0;
+}
+
+.dark #mobile-menu-button:hover {
+  color: #B0B0B0;
+}
+
+/* Sections dark mode */
+.dark section {
+  background-color: transparent;
+}
+
+.dark section#home {
+  background: linear-gradient(135deg, #1a1a1a 0%, #121212 40%, #121212 100%);
+}
+
+.dark section#about {
+  background: linear-gradient(135deg, #121212 0%, #1a1a1a 80%, #121212 100%);
+}
+
+.dark section#skills {
+  background: linear-gradient(135deg, #1a1a1a 0%, #121212 80%, #121212 100%);
+}
+
+.dark section#projects {
+  background: linear-gradient(135deg, #121212 0%, #1a1a1a 80%, #121212 100%);
+}
+
+.dark section#contact {
+  background: linear-gradient(135deg, #1a1a1a 0%, #121212 100%);
+}
+
+/* Text colors dark mode using custom palette */
+.dark .text-gray-900 {
+  color: #E0E0E0;
+}
+
+.dark .text-gray-600 {
+  color: #B0B0B0;
+}
+
+.dark .text-gray-700 {
+  color: #E0E0E0;
+}
+
+.dark .text-gray-500 {
+  color: #888888;
+}
+
+.dark .text-gray-400 {
+  color: #888888;
+}
+
+.dark .text-blue-600 {
+  color: #888888;
+}
+
+.dark .text-blue-700 {
+  color: #B0B0B0;
+}
+
+/* Background decorations dark mode */
+.dark .bg-blue-100 {
+  background-color: rgba(68, 68, 68, 0.2);
+}
+
+.dark .bg-purple-100 {
+  background-color: rgba(136, 136, 136, 0.2);
+}
+
+/* Cards dark mode using custom palette */
+.dark .skill-card-elegant,
+.dark .info-card-elegant {
+  background-color: #1a1a1a !important;
+  background-image: none !important;
+  border-color: #444444 !important;
+  --tw-gradient-from: #1a1a1a !important;
+  --tw-gradient-to: #1a1a1a !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark .skill-card-elegant:hover,
+.dark .info-card-elegant:hover {
+  border-color: #888888 !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.dark .contact-card-elegant {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(18, 18, 18, 0.98)) !important;
+  border-color: #444444 !important;
+}
+
+.dark .contact-card-elegant:hover {
+  border-color: #888888 !important;
+}
+
+/* Project cards dark mode */
+.dark .project-apple {
+  border-color: #444444 !important;
+}
+
+.dark .project-apple:hover {
+  border-color: #888888 !important;
+}
+
+/* Links dark mode using custom palette */
+.dark .link-apple {
+  color: #E0E0E0;
+}
+
+.dark .link-apple:hover {
+  color: #B0B0B0;
+}
+
+.dark .link-apple::after {
+  background: linear-gradient(90deg, #888888 0%, #B0B0B0 100%);
+}
+
+.dark .contact-link {
+  color: #E0E0E0;
+}
+
+.dark .contact-link:hover {
+  color: #888888;
+}
+
+.dark .contact-link::after {
+  background: linear-gradient(90deg, rgba(136, 136, 136, 0.8), rgba(176, 176, 176, 0.8));
+}
+
+/* Scroll progress dark mode */
+.dark .scroll-progress {
+  background: linear-gradient(90deg, rgba(136, 136, 136, 0.8), rgba(176, 176, 176, 0.8));
+}
+
+/* Footer dark mode */
+.dark footer {
+  background: rgba(18, 18, 18, 0.9) !important;
+  border-top-color: #444444 !important;
+}
+
+/* Mobile menu border dark mode */
+.dark #mobile-menu {
+  border-top-color: #444444 !important;
+}
+
+/* Theme toggle button dark mode */
+.dark #theme-toggle {
+  background: transparent;
+  border-color: #444444 !important;
+  color: #E0E0E0;
+}
+
+.dark #theme-toggle:hover {
+  background-color: #444444;
+  color: #E0E0E0;
+}
+
+/* Custom cursor dark mode */
+@media (min-width: 1024px) {
+  .dark .custom-cursor {
+    background: rgba(136, 136, 136, 0.9);
+  }
+  
+  .dark .custom-cursor.hover {
+    background: rgba(136, 136, 136, 0.15);
+    border-color: rgba(136, 136, 136, 0.5);
+  }
+}
+
+/* Profile ring dark mode */
+.dark .profile-ring {
+  border-color: rgba(136, 136, 136, 0.3);
+}
+
+/* Scrollbar dark mode using custom palette */
+.dark ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #444444;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #888888;
+}
+
+/* Animations for smooth theme transition */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Prevent transition on initial page load */
+body.preload * {
+  transition: none !important;
+}
