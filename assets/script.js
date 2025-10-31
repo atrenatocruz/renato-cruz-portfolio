@@ -359,3 +359,66 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// Timeline Scroll Highlighting
+document.addEventListener('DOMContentLoaded', () => {
+  const projectCards = document.querySelectorAll('.project-apple');
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  const timelineDots = document.querySelectorAll('.timeline-dot');
+  
+  if (projectCards.length === 0 || timelineItems.length === 0) return;
+  
+  function updateTimelineHighlight() {
+    let centerMostProject = null;
+    let minDistanceFromCenter = Infinity;
+    
+    // Find which project card is closest to the center of the viewport
+    projectCards.forEach((card, index) => {
+      const rect = card.getBoundingClientRect();
+      const cardCenter = rect.top + rect.height / 2;
+      const viewportCenter = window.innerHeight / 2;
+      const distanceFromCenter = Math.abs(cardCenter - viewportCenter);
+      
+      // Only consider cards that are at least partially visible
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        if (distanceFromCenter < minDistanceFromCenter) {
+          minDistanceFromCenter = distanceFromCenter;
+          centerMostProject = index;
+        }
+      }
+    });
+    
+    // Update timeline items
+    timelineItems.forEach((item, index) => {
+      const dot = timelineDots[index];
+      
+      if (index === centerMostProject) {
+        // Highlight the active timeline item
+        item.classList.add('timeline-active');
+        if (dot) {
+          dot.classList.add('timeline-dot-active');
+        }
+      } else {
+        // Remove highlight from inactive items
+        item.classList.remove('timeline-active');
+        if (dot) {
+          dot.classList.remove('timeline-dot-active');
+        }
+      }
+    });
+  }
+  
+  // Update on scroll with throttling for performance
+  let scrollTimeout;
+  window.addEventListener('scroll', () => {
+    if (scrollTimeout) {
+      window.cancelAnimationFrame(scrollTimeout);
+    }
+    scrollTimeout = window.requestAnimationFrame(() => {
+      updateTimelineHighlight();
+    });
+  });
+  
+  // Initial update
+  updateTimelineHighlight();
+});
