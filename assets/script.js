@@ -258,14 +258,19 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Apply theme on page load
   function applyTheme(theme) {
+    const root = document.documentElement;
+    const header = document.querySelector('header');
+
     if (theme === 'dark') {
+      root.classList.add('dark');
       document.body.classList.add('dark');
-      document.querySelector('header')?.classList.add('dark');
+      header?.classList.add('dark');
       sunIcons.forEach(icon => icon.classList.add('hidden'));
       moonIcons.forEach(icon => icon.classList.remove('hidden'));
     } else {
+      root.classList.remove('dark');
       document.body.classList.remove('dark');
-      document.querySelector('header')?.classList.remove('dark');
+      header?.classList.remove('dark');
       sunIcons.forEach(icon => icon.classList.remove('hidden'));
       moonIcons.forEach(icon => icon.classList.add('hidden'));
     }
@@ -316,12 +321,14 @@ document.addEventListener('DOMContentLoaded', () => {
       menuButton.setAttribute('aria-expanded', !isExpanded);
       
       // Toggle icons
-      if (!isExpanded) {
-        menuIcon.classList.add('hidden');
-        closeIcon.classList.remove('hidden');
-      } else {
-        menuIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
+      if (menuIcon && closeIcon) {
+        if (!isExpanded) {
+          menuIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+        } else {
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        }
       }
     });
 
@@ -330,8 +337,10 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
         menuButton.setAttribute('aria-expanded', 'false');
-        menuIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
+        if (menuIcon && closeIcon) {
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        }
       });
     });
 
@@ -342,8 +351,10 @@ document.addEventListener('DOMContentLoaded', () => {
           !mobileMenu.classList.contains('hidden')) {
         mobileMenu.classList.add('hidden');
         menuButton.setAttribute('aria-expanded', 'false');
-        menuIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
+        if (menuIcon && closeIcon) {
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        }
       }
     });
 
@@ -352,8 +363,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
         mobileMenu.classList.add('hidden');
         menuButton.setAttribute('aria-expanded', 'false');
-        menuIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
+        if (menuIcon && closeIcon) {
+          menuIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        }
         menuButton.focus();
       }
     });

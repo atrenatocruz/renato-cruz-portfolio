@@ -19,90 +19,114 @@
     <meta name="twitter:description" content="OutSystems Developer across Traditional, Reactive Web and Mobile." />
     <link rel="icon" href="assets/favicon.svg" />
     <link rel="canonical" href="https://atrenatocruz.github.io/renato-cruz-portfolio" />
-    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/styles.css?v=2" />
+    <style>
+      /* Ensure mobile menu readability and centering */
+      .mobile-menu-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #111827 !important;
+      }
+      .nav-link-mobile-apple {
+        justify-content: center;
+        text-align: center;
+      }
+      .dark .mobile-menu-link {
+        color: #ffffff !important;
+      }
+    </style>
+    <script>
+      // Prevent flash of wrong theme
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
   </head>
-  <body class="font-sans bg-white text-gray-900 antialiased preload">
+  <body class="font-sans bg-neutral-50 dark:bg-[#0a0a0a] text-gray-900 antialiased preload">
+    <!-- Noise Overlay -->
+    <div class="noise-bg"></div>
+    
+    <!-- Background Grid -->
+    <div class="fixed inset-0 grid-bg pointer-events-none -z-10 opacity-60"></div>
+
     <!-- Custom Cursor (desktop only) -->
     <div class="custom-cursor"></div>
     <div class="custom-cursor-dot"></div>
+    
     <!-- Scroll Progress Indicator -->
     <div class="scroll-progress"></div>
+    
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-gray-900 focus:text-white focus:rounded-lg focus:font-semibold">Skip to main content</a>
     
-    <!-- Navigation - Apple style minimal -->
-    <header class="sticky top-0 z-50 bg-white md:bg-white/80 md:backdrop-blur-xl supports-[backdrop-filter]:md:bg-white/80">
-      <nav class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
-        <div class="flex h-14 items-center justify-between">
-          <a href="#home" class="text-base font-medium text-gray-900 hover:text-gray-600 transition-colors" aria-label="Home - Renato Cruz Portfolio">
-            Renato Cruz
-          </a>
-          
-          <!-- Desktop Navigation -->
-          <div class="hidden md:flex items-center gap-4 text-sm">
-            <a href="#about" class="nav-link-apple" aria-label="Navigate to About section">About</a>
-            <a href="#skills" class="nav-link-apple" aria-label="Navigate to Skills section">Skills</a>
-            <a href="#projects" class="nav-link-apple" aria-label="Navigate to Projects section">Projects</a>
-            <a href="#contact" class="nav-link-apple" aria-label="Navigate to Contact section">Contact</a>
-            <button id="theme-toggle" aria-label="Toggle dark mode">
-              <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-              </svg>
-              <svg class="moon-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-              </svg>
-            </button>
-          </div>
-          
-          <!-- Mobile Controls (Theme Toggle + Menu Button) -->
-          <div class="md:hidden flex items-center gap-2">
-            <!-- Mobile Theme Toggle -->
-            <button id="theme-toggle-mobile-nav" aria-label="Toggle dark mode" class="p-2 text-gray-900 hover:text-gray-600 transition min-w-[44px] min-h-[44px] flex items-center justify-center">
-              <svg class="sun-icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-              </svg>
-              <svg class="moon-icon-mobile-nav hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-              </svg>
-            </button>
-            
-            <!-- Mobile Menu Button -->
-            <button 
-              id="mobile-menu-button"
-              class="p-2 -mr-2 text-gray-900 hover:text-gray-600 transition focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
-              aria-label="Toggle mobile menu"
-              aria-expanded="false"
-              aria-controls="mobile-menu"
-            >
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
-                <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-            </button>
-          </div>
+    <!-- Floating Header (New Navbar) -->
+    <header class="fixed top-6 left-1/2 -translate-x-1/2 z-40 w-full max-w-sm md:max-w-md lg:max-w-lg px-4">
+      <nav class="glass-card rounded-full px-4 sm:px-6 py-3 flex items-center justify-between shadow-xl ring-1 ring-black/5 dark:ring-white/10">
+        <a href="#home" class="font-bold text-lg tracking-tighter text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-colors z-50">RC.</a>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-4 text-sm font-medium text-neutral-600 dark:text-neutral-400">
+          <a href="#about" class="nav-link-apple hover:text-black dark:hover:text-white transition-colors">About</a>
+          <a href="#projects" class="nav-link-apple hover:text-black dark:hover:text-white transition-colors">Work</a>
+          <a href="#contact" class="nav-link-apple hover:text-black dark:hover:text-white transition-colors">Contact</a>
         </div>
         
-        <!-- Mobile Menu -->
-        <div 
-          id="mobile-menu"
-          class="hidden md:hidden pb-6 pt-4 border-t border-gray-200"
-          role="menu"
-        >
-          <div class="flex flex-col gap-1">
-            <a href="#about" class="nav-link-mobile-apple" role="menuitem">About</a>
-            <a href="#skills" class="nav-link-mobile-apple" role="menuitem">Skills</a>
-            <a href="#projects" class="nav-link-mobile-apple" role="menuitem">Projects</a>
-            <a href="#contact" class="nav-link-mobile-apple" role="menuitem">Contact</a>
-          </div>
-        </div>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors z-50" aria-label="Toggle menu" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6l12 12"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6l-12 12"></path>
+          </svg>
+        </button>
+        
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="p-2 -mr-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors z-50" aria-label="Toggle theme">
+          <svg class="theme-icon sun-icon hidden dark:block" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="5.5" fill="currentColor" opacity="0.92"></circle>
+            <g fill="currentColor" opacity="0.75">
+              <rect x="11.25" y="1.4" width="1.5" height="3.2" rx="0.75"></rect>
+              <rect x="11.25" y="19.4" width="1.5" height="3.2" rx="0.75"></rect>
+              <rect x="1.4" y="11.25" width="3.2" height="1.5" rx="0.75"></rect>
+              <rect x="19.4" y="11.25" width="3.2" height="1.5" rx="0.75"></rect>
+              <rect x="4.2" y="4.2" width="2.2" height="2.2" rx="1.1" transform="rotate(-45 5.3 5.3)"></rect>
+              <rect x="17.6" y="4.2" width="2.2" height="2.2" rx="1.1" transform="rotate(45 18.7 5.3)"></rect>
+              <rect x="4.2" y="17.6" width="2.2" height="2.2" rx="1.1" transform="rotate(45 5.3 18.7)"></rect>
+              <rect x="17.6" y="17.6" width="2.2" height="2.2" rx="1.1" transform="rotate(-45 18.7 18.7)"></rect>
+            </g>
+          </svg>
+          <svg class="theme-icon moon-icon block dark:hidden" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M21.752 15.002A9.718 9.718 0 0 1 12.998 3.25a7.5 7.5 0 1 0 8.754 11.752Z"></path>
+            <circle cx="8.5" cy="7" r="0.9" fill="currentColor" opacity="0.8"></circle>
+            <circle cx="9.75" cy="10.75" r="0.7" fill="currentColor" opacity="0.65"></circle>
+          </svg>
+        </button>
       </nav>
+      
+      <!-- Mobile Menu Dropdown -->
+      <div id="mobile-menu" class="hidden glass-card rounded-3xl mt-3 px-4 py-4 shadow-xl ring-1 ring-black/5 dark:ring-white/10 overflow-hidden">
+        <div class="flex flex-col gap-2">
+          <a href="#about" class="mobile-menu-link nav-link-mobile-apple px-4 py-3 text-center text-gray-900 dark:text-white hover:bg-black/5 dark:hover:bg-white/10 rounded-2xl transition-all font-medium">About</a>
+          <a href="#projects" class="mobile-menu-link nav-link-mobile-apple px-4 py-3 text-center text-gray-900 dark:text-white hover:bg-black/5 dark:hover:bg-white/10 rounded-2xl transition-all font-medium">Work</a>
+          <a href="#contact" class="mobile-menu-link nav-link-mobile-apple px-4 py-3 text-center text-gray-900 dark:text-white hover:bg-black/5 dark:hover:bg-white/10 rounded-2xl transition-all font-medium">Contact</a>
+        </div>
+      </div>
     </header>
 
     <!-- Main Content -->
     <main id="main-content">
     
-    <!-- Hero Section - Apple style with profile -->
-    <section id="home" class="relative pt-20 pb-28 md:pt-32 md:pb-40 overflow-hidden">
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-28 md:pt-48 md:pb-40 overflow-hidden">
       <!-- Subtle background decoration -->
       <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div class="absolute -top-40 -right-40 w-80 h-80 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
@@ -121,7 +145,7 @@
               </div>
             </div>
             
-            <!-- Main Headline - Apple style bold -->
+            <!-- Main Headline -->
             <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-tight text-gray-900 mb-6">
               OutSystems
               <span class="block mt-2">Developer.</span>
@@ -132,7 +156,7 @@
               <span id="typewriter-text"></span><span class="typing-cursor">|</span>
             </p>
             
-            <!-- Links - Apple style -->
+            <!-- Links -->
             <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 text-lg">
               <a href="#projects" class="link-apple text-blue-600 hover:text-blue-700">
                 View projects <span class="inline-block">↓</span>
@@ -482,11 +506,11 @@
     <footer class="bg-white border-t border-gray-100 py-6">
       <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <p class="text-center text-sm text-gray-400">
-          © <span id="year"></span> Renato Cruz
+          © <span id="year"></span> Renato Cruz. Built with ❤️
         </p>
       </div>
     </footer>
 
-    <script src="assets/script.js"></script>
+    <script src="assets/script.js?v=2"></script>
   </body>
 </html>
